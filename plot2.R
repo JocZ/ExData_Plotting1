@@ -9,13 +9,15 @@ s<-pwr$Date=="2007/02/01" |pwr$Date=="2007/02/02"
 x<- pwr[s,]
 
 # Second graph
+
+png(file="plot2.png")
+
 plot(x$ndate,x$Global_active_power,
      type="l",
      ylab="Global Active Power (Kilowatts)",
      xlab=""
      )
 
-#Creates the graph file
-
-dev.copy(png, file="plot2.png")
 dev.off()
+
+

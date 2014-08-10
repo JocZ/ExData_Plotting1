@@ -10,6 +10,8 @@ x<- pwr[s,]
 
 
 # Fourth graph
+
+png(file="plot4.png")
 par(mfrow=c(2,2))
 
 plot(x$ndate,x$Global_active_power,
@@ -39,10 +41,9 @@ plot(x$ndate,x$Global_reactive_power,
      xlab="datetime",
      ylab="Global_reactive_power")
 
-
-#Creates the graph file
-
-dev.copy(png, file="plot4.png")
 dev.off()
+
+
+
 
 

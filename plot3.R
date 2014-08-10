@@ -8,9 +8,10 @@ pwr$Date<- as.Date(pwr$Date,"%d/%m/%Y" )
 s<-pwr$Date=="2007/02/01" |pwr$Date=="2007/02/02"
 x<- pwr[s,]
 
-
-
 # Third graph
+
+png(file="plot3.png")
+
 plot(x$ndate,x$Sub_metering_1,type="l",
      ylab="Energy sub metering",
      xlab=""
@@ -21,7 +22,7 @@ legend("topright",lwd=2,col=c("black","red","blue"),
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3")
 )
 
-#Creates the graph file
-
-dev.copy(png, file="plot3.png")
 dev.off()
+
+
+

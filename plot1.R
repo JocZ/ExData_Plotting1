@@ -9,13 +9,13 @@ s<-pwr$Date=="2007/02/01" |pwr$Date=="2007/02/02"
 x<- pwr[s,]
 
 # First graph
+
+png(file="plot1.png")
+
 hist(x$Global_active_power,
      main="Global Active Power",
      col="red",
      xlab="Global Active Power (kilowatts)"
 )
 
-#Creates the graph file
-
-dev.copy(png, file="plot1.png")
 dev.off()
